@@ -1,6 +1,10 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
-import Project from '../components/Project';
+import AboutMe from '../components/AboutMe';
+import Projects from '../components/Project';
+import EmailSection from '../components/EmailSection';
+import Footer from '../components/Footer';
+import AchievementsSection from '../components/AchievementsSection';
 
 //Server: not found error handler
 const HeroSection = dynamic(
@@ -13,8 +17,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col ">
         <main>
         <HeroSection />
-        <Project />
+        <AchievementsSection />
+        <AboutMe />
+        <Projects />
+        <EmailSection />
         </main>
+        <Footer />
     </div>
   );
 }
