@@ -4,10 +4,10 @@ import ProjectCard from "./ProjectCard";
 const projectData = [
     {
         id: 1,
-        title: "LinkedOut & About",
+        title: "Staff Management System",
         description: "This is a project.",
-        image: "/projects/linkedout&about.png",
-        gitUrl: "https://github.com/APU-Blockchain-Cryptocurrency-Club/LinkedOutAndAbout"
+        image: "/projects/cprogramming.png",
+        gitUrl: "https://github.com/Lisosimida/Staff-Management-System"
 
     },
     {
