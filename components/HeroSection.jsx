@@ -16,7 +16,7 @@ const HeroSection = () => {
                     <h1 className="font-extrabold">
                         <span className="text-white text-8xl">
                             Hello, I&apos;m{" "}
-                            <span className="text-transparent bg-clip-text sm:text-8xl md:text-9xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                            <span className="text-transparent bg-clip-text sm:text-8xl md:text-9xl bg-gradient-to-r from-blue-500 via-skyblue-500 to-teal-500">
                                 Lisoh
                             </span>
                         </span>
@@ -28,10 +28,10 @@ const HeroSection = () => {
                                 }}
                                 onInit={(typewriter) => {
                                     typewriter
-                                        .typeString`<span style="color:#FF77FF">Data Analytic</span>`
+                                        .typeString`<span style="color:#6890B9">Data Analytic</span>`
                                         .pauseFor(1500)
                                         .deleteAll()
-                                        .typeString`<span style="color:#9E7BFF">Dancer</span>`
+                                        .typeString`<span style="color:#87C7A9">Dancer</span>`
                                         .pauseFor(1500)
                                         .deleteAll()
                                         .start();
@@ -41,7 +41,7 @@ const HeroSection = () => {
                         <p className ="text-sky-100 mt-8 text-base sm:text-lg md:text-xl mb-6">Slide down to know more about me!</p>
                         <Link 
                         href="https://drive.google.com/file/d/1CrKYKv8smrEmBDjih4jAvO7NBqSy6l39/view?usp=sharing"
-                        className ="px-6 inline-block py-3 rounded-full border-2 border-pink-500 hover:bg-pink-400">
+                        className ="px-6 inline-block py-3 rounded-full border-2 border-blue-500 hover:bg-blue-400">
                             View My Resume
 
                         </Link>
@@ -52,7 +52,7 @@ const HeroSection = () => {
                          <img
                          src="/Hero-Section.png"
                          alt="hero section"
-                         className="transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                         className="transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-3/4"
                          >
                          </img>
                     </div>
