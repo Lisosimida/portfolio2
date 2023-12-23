@@ -6,7 +6,7 @@ const achievementsList = [
         value: "5+",
     },
     {
-        metric: "Awards",
+        metric: "Certificates",
         value: "2+",
     },
     {
