@@ -30,7 +30,7 @@ const HeroSection = () => {
                                 }}
                                 onInit={(typewriter) => {
                                     typewriter
-                                        .typeString`<span style="color:#6890B9">Data Analytic</span>`
+                                        .typeString`<span style="color:#6890B9">Data Analyst</span>`
                                         .pauseFor(1500)
                                         .deleteAll()
                                         .typeString`<span style="color:#87C7A9">Dancer</span>`
