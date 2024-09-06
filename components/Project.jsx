@@ -10,13 +10,13 @@ const projectData = [
         gitUrl: "https://github.com/Lisosimida/Staff-Management-System"
 
     },
-    // {
-    //     id: 2,
-    //     title: "ClubDAO",
-    //     description: "This is a project.",
-    //     image: "/projects/clubdao.png",
-    //     gitUrl: "https://github.com/0xYudhishthra/ClubDAO"
-    // },
+    {
+        id: 2,
+        title: "Home Fibre Chatbot",
+        description: "Developed a chatbot that handles user complaints and recommends home fibre plans based on user preferences.",
+        image: "/projects/hfbpic.png",
+        gitUrl: "https://github.com/Lisosimida/homefiberbot1"
+    },
     // {
     //     id: 3,
     //     title: "FundChat",
