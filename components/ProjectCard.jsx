@@ -2,7 +2,7 @@ import React from "react";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, bgPosition, bgSize }) => {
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-white/20">
       <div className="pointer-events-none absolute -inset-20 opacity-0 transition duration-300 group-hover:opacity-100">
@@ -10,8 +10,12 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
       </div>
 
       <div
-        className="relative h-52 bg-center bg-no-repeat"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        className="relative h-52 bg-no-repeat"
+        style={{
+          backgroundImage: `url(${imgUrl})`,
+          backgroundSize: bgSize || "cover",
+          backgroundPosition: bgPosition || "center"
+        }}
         aria-label={`${title} preview`}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/0" />

@@ -34,17 +34,17 @@ const EmailSection = () => {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="mailto:lisoh03@gmail.com"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100"
+                className="btn btn-contrast"
               >
                 Email me
               </Link>
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="btn btn-ghost"
               >
                 See Projects
               </Link>
-            </div>
+            </div> 
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
@@ -58,7 +58,7 @@ const EmailSection = () => {
                 href="https://github.com/Lisosimida"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                className="inline-flex items-center gap-3 rounded-xl social-btn px-4 py-3"
                 aria-label="Open GitHub"
               >
                 <Image src={GithubIcon} alt="GitHub" width={22} height={22} />
@@ -68,7 +68,7 @@ const EmailSection = () => {
                 href="https://www.linkedin.com/in/guan-li-soh-b019a7233/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                className="inline-flex items-center gap-3 rounded-xl social-btn px-4 py-3"
                 aria-label="Open LinkedIn"
               >
                 <Image src={LinkedinIcon} alt="LinkedIn" width={22} height={22} />
@@ -78,7 +78,7 @@ const EmailSection = () => {
                 href="https://www.instagram.com/lisohlisoh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                className="inline-flex items-center gap-3 rounded-xl social-btn px-4 py-3"
                 aria-label="Open Instagram"
               >
                 <Image src={InstagramIcon} alt="Instagram" width={22} height={22} />
@@ -86,12 +86,12 @@ const EmailSection = () => {
               </Link>
               <Link
                 href="mailto:lisoh03@gmail.com"
-                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                className="inline-flex items-center gap-3 rounded-xl social-btn px-4 py-3"
                 aria-label="Send email"
               >
                 <Image src={GmailIcon} alt="Email" width={22} height={22} />
                 Email
-              </Link>
+              </Link> 
             </div>
           </div>
         </div>

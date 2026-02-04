@@ -81,13 +81,13 @@ const ResumeSection = () => {
                     href="https://drive.google.com/file/d/18TXsY-gFpmgBx-jva8k7ffbZxOxmSUma/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100"
+                    className="btn btn-contrast flex-1"
                   >
                     View Resume (PDF)
                   </Link>
                   <Link
                     href="#projects"
-                    className="inline-flex flex-1 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                    className="btn btn-ghost flex-1"
                   >
                     See Projects
                   </Link>

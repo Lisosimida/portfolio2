@@ -6,36 +6,43 @@ const projectData = [
         id: 1,
         title: "NLP Resume Parsing and Job Matching",
         description: "Used NLP techniques to build resume parsing and job matching system",
-        image: "/FYP_Resume_Parsing.png",
-        gitUrl: "https://github.com/Lisosimida/FYP_Final",
+        image: "/projects/hr.jpg",
+        gitUrl: "https://github.com/Lisosimida/parslyst-resume-system",
+        bgPosition: "left center",
+        bgSize: "80%",
     },
     {
         id: 2,
-        title: "Mars Space Exploration",
-        description: "Used ASP.NET MVC to build web application",
-        image: "/Mars_Space.png",
-        gitUrl: "https://github.com/Lisosimida/Mars_Space_Exploration",
+        title: "Deep Learning CNN for classification of fashion images",
+        description: " The dataset consists of approximately 44,000 color images of fashion items categorized under categories including footwear, tops, dresses and accessories.",
+        image: "/projects/fashion.jpg",
+        gitUrl: "https://github.com/Lisosimida/deep-learning-cnn",
+        bgPosition: "center",
     },
     {
         id: 3,
-        title: "National Science Challenge",
-        description: "Used NLP techniques to build classification model",
-        image: "/National Science Challenge.png",
-        gitUrl: "https://github.com/Lisosimida/AI_Final",
+        title: "Stock Broker Simulation",
+        description: "Builded a stock broker simulation system to simulate real-time stock trading environment",
+        image: "/projects/stock.jpg",
+        gitUrl: "https://github.com/sebasdiii/RTS",
+        bgPosition: "center",
     },
     {
         id: 4,
-        title: "Kulim City Infrastructure Assessment",
-        description: "Used QGIS to build map and analysis",
-        image: "/Kulim_City.png",
-        gitUrl: "https://github.com/Lisosimida/DA_Assignment",
+        title: "Spam Email Classification using NLP",
+        description: "Used NLP techniques to build a spam email classification system",
+        image: "/projects/email.jpg",
+        gitUrl: "https://github.com/sebasdiii/NLP-Spam-Email-Classification",
+        bgPosition: "center",
     },
     {
         id: 5,
-        title: "Clean My Home",
-        description: "Used Xamarin to build mobile application",
-        image: "/CleanMyHome.png",
-        gitUrl: "https://github.com/Lisosimida/CleanMyHome",
+        title: "CelcomDigi Home Fibre Bot",
+        description: "This chatbot handles user complaints and recommends home fibre plans based on user preferences.",
+        image: "/projects/chatbot.jpg",
+        gitUrl: "https://github.com/Lisosimida/homefiberbot1",
+        bgPosition: "center top",
+        bgSize: "80%",
     },
 ];
 
@@ -66,6 +73,8 @@ const Project = () => {
                 description={project.description}
                 imgUrl={project.image}
                 gitUrl={project.gitUrl}
+                bgPosition={project.bgPosition}
+                bgSize={project.bgSize}
               />
             ))}
           </div>

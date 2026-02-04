@@ -52,6 +52,14 @@ const AboutMe = () => {
     //1b
     const[tab, setTab] = useState("ai-ml");
     const[isPending, startTransition] = useTransition();
+
+    const TAB_RING = {
+        "ai-ml": "ring-1 ring-sky-200/30",
+        "engineering": "ring-1 ring-emerald-200/30",
+        "experience": "ring-1 ring-violet-200/30",
+        "education": "ring-1 ring-amber-200/30",
+    };
+
     const handleTabChange = (id) => {
         startTransition(() => {
             setTab(id);
@@ -134,7 +142,7 @@ const AboutMe = () => {
                             
                         </div>
 
-                        <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5 text-slate-200">
+                        <div className={`mt-6 rounded-2xl border border-white/10 bg-black/30 p-5 text-slate-200 ${TAB_RING[tab]}`}>
                             {TAB_DATA.find((t) => t.id === tab).content}
                         </div>
                     </div>

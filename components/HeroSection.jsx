@@ -59,17 +59,17 @@ const HeroSection = () => {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="#resume"
-                  className="inline-flex flex-1 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100"
+                  className="btn btn-contrast flex-1"
                 >
                   Resume Snapshot
                 </Link>
                 <Link
                   href="#projects"
-                  className="inline-flex flex-1 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="btn btn-ghost flex-1"
                 >
                   View Projects
                 </Link>
-              </div>
+              </div> 
             </motion.div>
 
             <div className="md:col-span-5">
