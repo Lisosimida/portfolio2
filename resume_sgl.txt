@@ -1,0 +1,70 @@
+Soh Guan Li
++6010-2216052 | guanlisoh20@gmail.com
+SUMMARY
+Early-career engineer with experience in data analysis and AI-related projects, including NLP and machine learning applications. Awarded Best Student Project for Final Year Project at APU and has contributed to real-world data and AI initiatives during internships and industry roles. Passionate about building reliable and useful AI systems while continuously learning.
+
+EDUCATION
+Asia Pacific University of Technology & Innovation 					        June 2022 – Nov 2025
+Bachelor of Computer Science (Hons), Data Analytics
+First Class Honours | CGPA: 3.59 / 4.00
+•	Vice Chancellor’s List in Academic Year 2022/2023
+Tsun Jin High School 								           	     Jan 2016 – January 2022
+•	UEC: 16 points (5 subjects)
+•	SPM: 5As (A+ Mathematics, A Additional Mathematics)
+
+PROJECTS
+NLP-Based Resume Parsing & Job Matching System 				        Jan 2025 – May 2025
+Awarded “Best Student Project” among all CS (Data Analytics) students, APU
+Python | NLP | LLM | Machine Learning | Streamlit							        
+•	Designed and implemented an end-to-end AI system to automate resume parsing and candidate–job matching
+•	Built NLP pipelines for text preprocessing, entity extraction, and structured feature representation
+•	Implemented Named Entity Recognition (NER) to extract skills, education, and experience from resumes
+•	Trained and evaluated multiple ML approaches, conducting systematic experimentation and performance comparison.
+Fashion Image Classification with Fashion-MNIST 					       Jan 2025 – May 2025
+Python | CNN | Computer Vision  							
+•	Handle Processed 60,000 grayscale images (28×28) across 10 apparel categories
+•	Applied data preprocessing techniques including normalization and resizing
+•	Implemented Convolutional Neural Networks (CNNs) and experimented with hybrid CNN architectures to improve classification accuracy.
+Text Analytics & Spam Email Classification 					        Aug 2024 - Dec 2024
+Python | NLP | Supervised Learning
+•	Built NLP preprocessing pipelines (tokenization, stemming, POS tagging) using Python libraries
+•	Conducted EDA and trained supervised models for spam email classification
+•	Tuned hyperparameters and evaluated model performance across multiple approaches
+
+
+
+CelcomDigi Home Fibre Chatbot 							     April 2024 – Aug 2024
+Python | LLM | LangChain | RAG	    					
+•	Developed a chatbot that handles user complaints and recommends home fibre plans based on user preferences.
+•	Integrated LLM-based conversational logic and retrieval-augmented responses for improved answer relevance
+
+WORK EXPERIENCE
+Tencent Games, Data Analyst Engineer	 					          Nov 2025 – Present
+•	Processed and reviewed player complaint cases by analyzing punishment history and reported records using internal data pipelines.
+•	Executed internal data workflows to retrieve structured punishment and report data for targeted user groups.
+•	Consolidated pipeline outputs into standardized Excel templates for further review and tracking.
+•	Evaluated cases against predefined thresholds to determine eligibility for manual punishment removal.
+•	Performed controlled manual adjustments for eligible cases while ensuring compliance with risk and enforcement policies.
+•	Documented analysis outcomes and decisions to support auditability and cross-team communication.
+CelcomDigi Berhad, AI Engineer Intern	 					 April 2024 – August 2024
+•	Developed AI Chatbots using Python, AWS, and Azure for internal employee assistance, self-service PDF queries, and customer service training.	
+•	Organized AI awareness events and initiatives, including AI Week, to promote AI within the company.
+•	Built an AI Partner platform to foster collaboration on AI use case development with internal and external partners.
+101 Classroom, Part Time Tutor						           August 2022 – January 2023
+•	Delivered comprehensive instruction and academic assistance to students, enhancing patience skills.
+•	Assistance to the head teacher, learned to communicate and cooperate with colleagues.
+•	Conducted post-class educational sessions for students, honing skills in effective time management.
+
+ACTIVITIES
+Next.js CodeCraft Workshop: Build a Personal Site						      December 2023
+•	Developed a personal site with Tailwind CSS and React and deployed it on Vercel.
+•	Deployed on Vercel: https://portfolio2-ddeploy.vercel.app/
+
+TECHNICAL SKILLS
+Programming Languages: Python, Java, SQL, R
+AI / Machine Learning: NLP, NER, LLMs, CNNs, Feature Engineering, Model Evaluation
+Frameworks & Tools: Streamlit, LangChain, Ollama
+Data & Analytics: Pandas, NumPy, SAS Enterprise Miner
+Cloud & Dev Tools: AWS, Microsoft Azure, Git
+Others: Microsoft Office (Excel, Word, PowerPoint)
+

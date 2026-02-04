@@ -6,35 +6,98 @@ import Link from "next/link";
 import Image from "next/image";
 import GmailIcon from "../public/gmail-icon.svg";
 
-const EmailSection = () => { 
+const EmailSection = () => {
+  return (
+    <section id="contact" className="py-20">
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-8 sm:p-10">
+        <div className="pointer-events-none absolute inset-0 opacity-80">
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-sky-500/15 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl" />
+        </div>
 
-
-    return (
-        <main className="grid md:grid-cols-2 my-12 md:my-12 py-24 md:py-24 gap-4 relative" id="contact">
-            <div className="z-10">
-                <h5 className="text-4xl font-bold text-white my-2 ">Let&apos;s Connect</h5>
-                <p className="text-[#ADB7BE] mb-4 max-w-md mt-8 text-justify">
-                I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
-                </p>
-                <h4 className="pb-3 mt-6">Let&apos;s get in touch!</h4>
-                <div className=" flex flex-row gap-4 mt-6">
-                    <Link href="https://github.com/Lisosimida">
-                        <Image src={GithubIcon} alt="Github Icon" />
-                    </Link>
-                    <Link href="https://www.linkedin.com/in/guan-li-soh-b019a7233/">
-                        <Image src={LinkedinIcon} alt="Linkedin Icon" />
-                    </Link>
-                    <Link href="https://www.instagram.com/lisohlisoh/" className="mt-1">
-                        <Image src={InstagramIcon}/>
-                    </Link>
-                    <Link href="mailto:lisoh03@gmail.com" className="mt-1">
-                        <Image src={GmailIcon}/>
-                    </Link>
-
-                </div>
+        <div className="relative grid gap-8 md:grid-cols-2 md:items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-slate-200">
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              Let&apos;s build something useful
             </div>
-        </main>
-    );
+
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Let&apos;s Connect
+            </h2>
+
+            <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
+              I&apos;m currently open to AI Engineer opportunities. If you&apos;re hiring, collaborating, or want to chat about LLM/RAG/NLP
+              work, I&apos;ll reply as soon as I can.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="mailto:lisoh03@gmail.com"
+                className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100"
+              >
+                Email me
+              </Link>
+              <Link
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                See Projects
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <h3 className="text-lg font-semibold text-white">Social</h3>
+            <p className="mt-2 text-sm text-slate-300">
+              Quick links to my profiles.
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="https://github.com/Lisosimida"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                aria-label="Open GitHub"
+              >
+                <Image src={GithubIcon} alt="GitHub" width={22} height={22} />
+                GitHub
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/guan-li-soh-b019a7233/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                aria-label="Open LinkedIn"
+              >
+                <Image src={LinkedinIcon} alt="LinkedIn" width={22} height={22} />
+                LinkedIn
+              </Link>
+              <Link
+                href="https://www.instagram.com/lisohlisoh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                aria-label="Open Instagram"
+              >
+                <Image src={InstagramIcon} alt="Instagram" width={22} height={22} />
+                Instagram
+              </Link>
+              <Link
+                href="mailto:lisoh03@gmail.com"
+                className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                aria-label="Send email"
+              >
+                <Image src={GmailIcon} alt="Email" width={22} height={22} />
+                Email
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default EmailSection;

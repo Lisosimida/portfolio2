@@ -8,29 +8,94 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: radial-gradient(1200px 600px at 15% 10%, rgba(56, 189, 248, 0.12), transparent 60%),
+    radial-gradient(900px 600px at 85% 20%, rgba(99, 102, 241, 0.10), transparent 55%),
+    radial-gradient(900px 700px at 50% 90%, rgba(16, 185, 129, 0.08), transparent 55%),
+    linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light theme */
+.light body {
+  --foreground-rgb: 2, 6, 23;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+  background: radial-gradient(1200px 600px at 15% 10%, rgba(56, 189, 248, 0.18), transparent 60%),
+    radial-gradient(900px 600px at 85% 20%, rgba(99, 102, 241, 0.14), transparent 55%),
+    radial-gradient(900px 700px at 50% 90%, rgba(16, 185, 129, 0.10), transparent 55%),
+    linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+/* Premium background grid */
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 30%, black 60%, transparent 100%);
+}
+
+.light .bg-grid {
+  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.10) 1px, transparent 1px);
+}
+
+/* Glass surface primitives (re-usable) */
+.surface {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+}
+
+.light .surface {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(2, 6, 23, 0.12);
+}
+
+.surface-soft {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.light .surface-soft {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(2, 6, 23, 0.12);
 }
 
 .scrolled-header {
-  background-color: rgba(0, 0, 0, 0.05); /* Semi-transparent white background */
-  backdrop-filter: blur(35px); /* Apply a blur effect */
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(22px);
 }
 
-/* Google web: let the scrollbar display none */
-::-webkit-scrollbar {
-  display: none;
+.light .scrolled-header {
+  background-color: rgba(255, 255, 255, 0.65);
 }
 
-/* Firefox, edge: let the scroll bar display none */
-::-webkit-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
+
+/* Keep scrollbars visible (better UX/accessibility). */
