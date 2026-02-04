@@ -2,77 +2,113 @@ import React from "react";
 import TypeWritter from "typewriter-effect";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 const HeroSection = () => {
+  return (
+    <main id="top" className="pt-24">
+      <section className="py-10">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-8 sm:p-10">
+          <div className="pointer-events-none absolute inset-0 opacity-80">
+            <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl" />
+            <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl" />
+          </div>
 
-    return (
-        <main className="py-16 mt-16 md:flex md:shrink-0">
-            <div className="grid grid-cols-1 md:grid-cols-12">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="col-span-1 md:col-span-8 place-self-center justify-self-start"
+          <div className="relative grid grid-cols-1 items-center gap-12 md:grid-cols-12">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="md:col-span-7"
+            >
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-slate-200">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                Building practical AI systems end-to-end
+              </div>
+
+              <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+                Hello, I&apos;m{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-teal-300">
+                  Li Soh
+                </span>
+              </h1>
+
+              <div className="mt-3 text-2xl font-semibold text-slate-200 sm:text-3xl">
+                <TypeWritter
+                  options={{ autoStart: true, loop: true }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString('<span style="color:#7DD3FC">AI Engineer</span>')
+                      .pauseFor(1400)
+                      .deleteAll()
+                      .typeString('<span style="color:#A5B4FC">LLM / RAG Builder</span>')
+                      .pauseFor(1400)
+                      .deleteAll()
+                      .typeString('<span style="color:#6EE7B7">NLP Engineer</span>')
+                      .pauseFor(1400)
+                      .deleteAll()
+                      .start();
+                  }}
+                />
+              </div>
+
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-200 sm:text-lg">
+                I build AI features that ship: data pipelines, NLP/LLM applications, evaluation, and clean UI. Scroll for a fast
+                resume snapshot and selected projects.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="#resume"
+                  className="inline-flex flex-1 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100"
                 >
-                    <h1 className="font-extrabold">
-                        <span className="text-white text-8xl">
-                            Hello, I&apos;m{" "}
-                            <span className="text-transparent bg-clip-text sm:text-8xl md:text-9xl bg-gradient-to-r from-blue-500 via-skyblue-500 to-teal-500">
-                                Li Soh
-                            </span>
-                        </span>
-                        <span className="text-7xl">
-                            <TypeWritter
-                                options={{
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                                onInit={(typewriter) => {
-                                    typewriter
-                                        .typeString`<span style="color:#6890B9">Data Analyst</span>`
-                                        .pauseFor(1500)
-                                        .deleteAll()
-                                        .typeString`<span style="color:#87C7A9">Dancer</span>`
-                                        .pauseFor(1500)
-                                        .deleteAll()
-                                        .start();
-                                }}
-                            ></TypeWritter>
-                        </span>
-                        <p className ="text-sky-100 mt-8 text-base sm:text-lg md:text-xl mb-6">Slide down to know more about me!</p>
-                        <Link
-                        href="#projects" 
-                        className="px-12 mb-4 inline-block py-3 rounded-full mr-4 border-solid border-2 border-indigo-600 hover:bg-violet-600">
-                            <span className="text-xl text-white">Projects</span>
-                        </Link>
-                        <Link 
-                        href="https://drive.google.com/file/d/1-CUCC9kdiPXyRDisI49XvYHR7ImpISqA/view?usp=sharing"
-                        className ="px-6 inline-block py-3 rounded-full border-2 border-blue-500 hover:bg-blue-400">
-                            View My Resume
+                  Resume Snapshot
+                </Link>
+                <Link
+                  href="#projects"
+                  className="inline-flex flex-1 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  View Projects
+                </Link>
+              </div>
+            </motion.div>
 
-                        </Link>
-                    </h1>
-                </motion.div>
-                <div className="col-span-4 md:col-span-4 place-self-center mt-12 lg:mt-0 pt-0 lg:pt-24">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                    <div className="w-[400px] h-[400px] relative z-0">
-                         <img
-                         src="/Hero-Section.png"
-                         alt="hero section"
-                         className="transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-3/4"
-                         >
-                         </img>
-                    </div>
-                    </motion.div>
+            <div className="md:col-span-5">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="mx-auto w-full max-w-[360px]"
+              >
+                <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-black/30">
+                  <img
+                    src="/Hero-Section.png"
+                    alt="Li Soh portrait"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
                 </div>
+
+                <div className="mt-4 grid grid-cols-3 gap-3">
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-3 text-center">
+                    <div className="text-xs uppercase tracking-wider text-slate-400">Focus</div>
+                    <div className="mt-1 text-sm font-semibold text-white">LLM + RAG</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-3 text-center">
+                    <div className="text-xs uppercase tracking-wider text-slate-400">Stack</div>
+                    <div className="mt-1 text-sm font-semibold text-white">Python</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-3 text-center">
+                    <div className="text-xs uppercase tracking-wider text-slate-400">Style</div>
+                    <div className="mt-1 text-sm font-semibold text-white">Ship fast</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-        </main>
-    );
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 };
 
 export default HeroSection;

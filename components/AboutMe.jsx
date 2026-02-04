@@ -5,43 +5,34 @@ import TabButton from "./TabButton";
 //1d
 const TAB_DATA = [
     {
-        title: "Hard Skills",
-        id: "hard skills",
+        title: "AI / ML",
+        id: "ai-ml",
         content: (
-          <ul className="list-disc pl-2">
-                <li>Python Programming</li>
-                <li>Cisco Packet Tracer</li>
-                <li>C Programming</li>
-                <li>Java</li>
-                <li>R studio</li>
-                <li>SAS studio</li>
+          <ul className="list-disc pl-4 text-slate-200">
+                <li>NLP, NER, LLMs, RAG</li>
+                <li>CNNs, supervised learning, model evaluation</li>
+                <li>Feature engineering and experimentation</li>
           </ul>
         ),
     },
     {
-        title: "Soft Skills",
-        id: "soft skills",
+        title: "Engineering",
+        id: "engineering",
         content: (
-          <ul className="list-disc pl-2">
-                <li>Responsible</li>
-                <li>Communication</li>
-                <li>Adaptability</li>
-                <li>Teamwork</li>
+          <ul className="list-disc pl-4 text-slate-200">
+                <li>Python, Java, SQL, R</li>
+                <li>Streamlit, LangChain, Ollama</li>
+                <li>AWS, Microsoft Azure, Git</li>
           </ul>
         ),
     },
     {
-        title: "Experiences",
-        id: "experiences",
+        title: "Experience",
+        id: "experience",
         content: (
-          <ul className="list-disc pl-2">
-            <li>Waiter</li>
-            <li>Service Crew</li>
-            <li>Bartender</li>
-            <li>Tuition Teacher</li>
-            <li>Parcel packer</li>
-            <li>Concert Main Dancer</li>
-            <li>Flashmob Dancer</li>
+          <ul className="list-disc pl-4 text-slate-200">
+            <li>AI Engineer Intern @ CelcomDigi (LLM chatbots, RAG, PDF Q&amp;A)</li>
+            <li>Data Analyst Engineer @ Tencent Games (data workflows, case analysis)</li>
           </ul>
         ),
     },
@@ -49,9 +40,9 @@ const TAB_DATA = [
         title: "Education",
         id: "education",
         content: (
-          <ul className="list-disc pl-2">
-                <li>Asia Pacific University</li>
-                <li>Tsun Jin High School</li>
+          <ul className="list-disc pl-4 text-slate-200">
+                <li>APU — BSc (Hons) Computer Science (Data Analytics), First Class</li>
+                <li>Vice Chancellor’s List (2022/2023)</li>
           </ul>
         ),
     }
@@ -59,7 +50,7 @@ const TAB_DATA = [
 //1
 const AboutMe = () => {
     //1b
-    const[tab, setTab] = useState("hard skills");
+    const[tab, setTab] = useState("ai-ml");
     const[isPending, startTransition] = useTransition();
     const handleTabChange = (id) => {
         startTransition(() => {
@@ -68,55 +59,86 @@ const AboutMe = () => {
     };
     //1a
     return(
-        <section className="text-white grid" id="aboutMe">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-32 py-16 xl-gap-16 items-center">
-                <div>
-                    <img src="/AboutMe.png" alt="About Me" width={450} height={450} style={{ borderRadius: "25px" }}/>
+        <section className="py-20" id="aboutMe">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-8 sm:p-10">
+                <div className="pointer-events-none absolute inset-0 opacity-80">
+                    <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-sky-500/15 blur-3xl" />
+                    <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl" />
                 </div>
-                <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h1 className="text-4xl font-bold text-white mb-4">About Me</h1>
-                    <p className="text-base text-justify lg:text-lg">Meet me, a second-year student specializing in computer science with a focus on data analytics at the Asia Pacific University of Technology & Innovation (APU). I embody a mix of responsibility, kindness, and a relentlessly positive mindset that fuels my journey through academia and beyond. Always eager to broaden my horizons, I thrive on the challenges that come with learning new concepts and tackling difficulties head-on. As a student in the dynamic field of computer science, I am constantly honing my skills in data analytics, seeking to make meaningful contributions to the evolving tech landscape.
-Beyond the world of algorithms and code, I find passion and joy in dancing. It&apos;s not just a hobby for me; it&apos;s a commitment to shaping a well-rounded individual. Dancing isn&apos;t just about movement; it&apos;s about discipline, creativity, and the pursuit of a healthy lifestyle.
-Driven by a genuine interest in helping others, I am not only a student of technology but also a believer in the power of collaboration and community. My positive outlook extends to a passion for contributing to projects that have a positive impact on the world.
-If you&apos;re curious to learn more about my journey, skills, and experiences, feel free to explore my resume and projects. I&apos;m always open to connecting with like-minded individuals who share a passion for growth, learning, and making a difference. Let&apos;s dance through the challenges and code our way to a better future! </p>
-                    <div className="flex flex-row mt-8">
-{/* 1e */}
-                        <TabButton 
-                        selectTab={() => handleTabChange("hard skills")}
-                        active= {tab === "hard skills"}
-                        >
-                            {" "}
-                            Hard Skills{" "}
-                        </TabButton>
 
-                        <TabButton 
-                        selectTab={() => handleTabChange("soft skills")}
-                        active= {tab === "soft skills"}
-                        >
-                            {" "}
-                            Soft Skills{" "}
-                        </TabButton>
-
-                        <TabButton 
-                        selectTab={() => handleTabChange("experiences")}
-                        active= {tab === "experiences"}
-                        >
-                            {" "}
-                            Experiences{" "}
-                        </TabButton>
-
-                        <TabButton 
-                        selectTab={() => handleTabChange("education")}
-                        active= {tab === "education"}
-                        >
-                            {" "}
-                            Education{" "}
-                        </TabButton>
-                        
+                <div className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+                    <div>
+                        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/30">
+                            <img
+                                src="/AboutMe.png"
+                                alt="Li Soh"
+                                className="h-full w-full object-cover"
+                            />
+                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
+                        </div>
                     </div>
-                    <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
-                </div>
 
+                    <div className="text-left flex flex-col">
+                        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-slate-200">
+                            <span className="h-2 w-2 rounded-full bg-sky-400" />
+                            AI Engineer profile
+                        </div>
+
+                        <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">About Me</h2>
+
+                        <p className="mt-3 text-base leading-relaxed text-slate-200 sm:text-lg">
+                            I&apos;m an early-career engineer focused on building practical AI systems. My experience includes NLP pipelines,
+                            named entity recognition, resume parsing and job matching, and LLM applications such as retrieval-augmented
+                            generation (RAG). I enjoy designing end-to-end solutions—from data processing and modeling to evaluation and
+                            deployment.
+                        </p>
+
+                        <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">
+                            I&apos;ve shipped real-world chatbot work during my internship at CelcomDigi (LLM + RAG, internal assistance, PDF
+                            querying) and I&apos;m currently working as a Data Analyst Engineer at Tencent Games where I execute data workflows
+                            and support policy-driven case analysis.
+                        </p>
+
+                        <div className="mt-8 flex flex-row flex-wrap gap-2">
+                            <TabButton 
+                            selectTab={() => handleTabChange("ai-ml")}
+                            active= {tab === "ai-ml"}
+                            >
+                                {" "}
+                                AI / ML{" "}
+                            </TabButton>
+
+                            <TabButton 
+                            selectTab={() => handleTabChange("engineering")}
+                            active= {tab === "engineering"}
+                            >
+                                {" "}
+                                Engineering{" "}
+                            </TabButton>
+
+                            <TabButton 
+                            selectTab={() => handleTabChange("experience")}
+                            active= {tab === "experience"}
+                            >
+                                {" "}
+                                Experience{" "}
+                            </TabButton>
+
+                            <TabButton 
+                            selectTab={() => handleTabChange("education")}
+                            active= {tab === "education"}
+                            >
+                                {" "}
+                                Education{" "}
+                            </TabButton>
+                            
+                        </div>
+
+                        <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5 text-slate-200">
+                            {TAB_DATA.find((t) => t.id === tab).content}
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
