@@ -2,6 +2,7 @@ import React from "react";
 import TypeWritter from "typewriter-effect";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -80,10 +81,13 @@ const HeroSection = () => {
                 className="mx-auto w-full max-w-[360px]"
               >
                 <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-black/30">
-                  <img
+                  <Image
                     src="/Hero-Section.png"
                     alt="Li Soh portrait"
+                    width={360}
+                    height={360}
                     className="h-full w-full object-cover"
+                    priority
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
                 </div>

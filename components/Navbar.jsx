@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
+import Logo from "./Logo";
 
 const NAV_ITEMS = [
   { id: "aboutMe", label: "About" },
@@ -88,8 +89,8 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="text-lg font-semibold tracking-wide text-white dark:text-white">
-          Li Soh
+        <a href="#top">
+          <Logo size={36} />
         </a>
 
         <div className="hidden items-center gap-2 text-sm md:flex">

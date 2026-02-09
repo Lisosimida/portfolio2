@@ -1,6 +1,7 @@
 import React from "react";
 import { useTransition, useState } from "react";
 import TabButton from "./TabButton";
+import Image from "next/image";
 
 //1d
 const TAB_DATA = [
@@ -77,9 +78,11 @@ const AboutMe = () => {
                 <div className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2">
                     <div>
                         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/30">
-                            <img
+                            <Image
                                 src="/AboutMe.png"
                                 alt="Li Soh"
+                                width={400}
+                                height={400}
                                 className="h-full w-full object-cover"
                             />
                             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
